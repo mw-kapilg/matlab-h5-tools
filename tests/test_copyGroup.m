@@ -4,6 +4,8 @@
 
 % Copyright (C) 2023- University College London (Bradley Treeby).
 
+import h5tools.*
+
 classdef test_copyGroup < matlab.unittest.TestCase
     properties
         fromFile = 'testFrom.h5';
