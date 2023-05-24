@@ -4,8 +4,6 @@
 
 % Copyright (C) 2023- University College London (Bradley Treeby).
 
-import h5tools.copyGroup
-
 classdef test_copyGroup < matlab.unittest.TestCase
     properties
         fromFile = 'testFrom.h5';
@@ -23,6 +21,7 @@ classdef test_copyGroup < matlab.unittest.TestCase
     end
     
     methods (TestMethodSetup)
+        import h5tools.*
 
         % Create two HDF5 files, both containing a group with a dataset.
         function createH5Files(testCase)
