@@ -51,7 +51,7 @@ classdef test_copyGroup < matlab.unittest.TestCase
         % Copy a dataset from one file to another, and verify the copied
         % dataset is correct.
         function testValidInput(testCase)
-            copyGroup(testCase.fromFile, testCase.toFile, testCase.groupFile1);
+            h5tools.copyGroup(testCase.fromFile, testCase.toFile, testCase.groupFile1);
 
             dataOut = h5read(testCase.toFile, ['/' testCase.groupFile1 '/' testCase.datasetFile1]);
             testCase.verifyEqual(dataOut, testCase.dataFile1);
